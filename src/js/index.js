@@ -5,6 +5,8 @@
   const $ = document.querySelector.bind(document);
 
   const canvas = $('#pathfindindRendered'), ctx = canvas.getContext('2d');
+
+  const algorithm = $('#algorithm');
   
   var tileSize;
 
@@ -12,7 +14,7 @@
     g = random(0, 255),
     b = random(0, 255);
 
-  var heuristicMode = 'Euclidian';
+  var heuristicMode = 'Manhattan';
 
   var wallColor = 'purple', lineColor = {
     lookingFor: 'skyblue',
@@ -65,6 +67,10 @@
 
     ctx.lineCap   = 'round';
     ctx.lineWidth = tileSize * .35;
+
+    algorithm.addEventListener('change', e => {
+      heuristicMode = e.target.value;
+    });
 
     init();
   }

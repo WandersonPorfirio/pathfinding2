@@ -23,3 +23,9 @@ canvas {
   margin: auto;
   box-shadow: 0 0 4px #aaa, 0 4px 4px #aaa;
 }
+
+#algorithm {
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+}
