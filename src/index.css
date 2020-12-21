@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0 none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: gainsboro;
+}
+
+canvas {
+  margin: auto;
+  box-shadow: 0 0 4px #aaa, 0 4px 4px #aaa;
+}
