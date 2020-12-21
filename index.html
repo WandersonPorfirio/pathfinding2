@@ -27,10 +27,6 @@
 			margin: auto;
 			box-shadow: 0 0 4px #aaa, 0 4px 4px #aaa;
 		}
-
-		#controlContainer {
-
-		}
 	</style>
 </head>
 <body>
@@ -46,7 +42,7 @@
 				g = random(0, 255),
 				b = random(0, 255);
 
-			var heuristicMode = 'Manhattan';
+			var heuristicMode = 'Euclidian';
 
 			var wallColor = 'purple', lineColor = {
 				lookingFor: 'skyblue',
@@ -208,13 +204,7 @@
 
 
 			function countingWalls (matrix) {
-				let current = 0;
-
-				matrix.forEach(row => {
-					current += row.filter(cell => cell.wall).length;
-				});
-
-				return current;
+				return matrix.reduce((acc, row) => acc + row.filter(cell => cell.wall).length, 0);
 			}
 
 
